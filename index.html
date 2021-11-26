@@ -4,6 +4,14 @@
 		<html lang="en">
 		<title>Snazzy Site</title>
 		<link rel="stylesheet" href="style.css">
+			
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     
+		<script>
+			$.getJSON("https://api.ipify.org?format=json", function(data) {
+				$("#gfg").html(data.ip);
+			})
+		</script>
 	</head>
 	<body>
 		<ul class="navbar">
@@ -12,7 +20,9 @@
 		</ul>
 		
 		<div class = "Header">
-			 <p><b>The impostor is among us</b></p>	
+			<p><b>The impostor is among us</b></p>	
+			<p>I has ur IP</p>
+			<p id="gfg"></p>
 			<h1>SUS</h1>
 			<h2>SUS</h2>
 			<h3>SUS</h3>
@@ -21,6 +31,5 @@
 			<h6>SUS</h6>
 			<img src="impostor.jpg">
 		</div>
-		<script src="script.js"></script>
 	</body>
 </html>
